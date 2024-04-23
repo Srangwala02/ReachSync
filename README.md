@@ -27,8 +27,11 @@ To run this project, you need to install XAMPP. Follow the steps below:
     ```
   - Follow the installation instructions provided by the installer.
 
+## 2. Node.js Installation
 
-## 2. Starting XAMPP
+Ensure you have Node.js installed on your system. You can download it from [here](https://nodejs.org/en). Follow the installation instructions provided for your operating system.
+
+## 3. Starting XAMPP
 
 Follow these steps to start XAMPP:
 
@@ -36,7 +39,7 @@ Follow these steps to start XAMPP:
 2. Start the Apache and MySQL modules by clicking on the "Start" button next to them.
 3. Once both modules are running, you can proceed with the next steps.
 
-## 3. Database Setup
+## 4. Database Setup
 
 After starting XAMPP, navigate to http://localhost/phpmyadmin/ in your web browser.
 
@@ -556,13 +559,20 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-## 4. **Project Directory Setup**
+## 5. **Project Directory Setup**
 
-Navigate to `C:\xampp\htdocs` (Windows) or `/Applications/XAMPP/htdocs` (macOS) or `/opt/lampp/htdocs` (Linux).
+After installing Node.js, follow these steps to set up the project:
 
-1. Create a folder named `mycode`.
-2. Inside `mycode`, create another folder named `template`.
-3. Inside `template`, create another folder named `star1`.
-4. Place your project files, such as `pages` folder, etc., inside the `star1` folder.
+- **Clone the repository:**
+  - git clone https://github.com/your-username/your-project.git
 
+- **Navigate to the project directory:**
+  - cd your-project
+     
+- **Install dependencies:**
+  - npm install
+
+- **Start the Node.js application:**
+  - npm run dev
+    
 Now, you're all set to run the project. Open your web browser and navigate to `http://localhost/mycode/template/star1` to view your project.
