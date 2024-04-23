@@ -72,7 +72,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -86,7 +86,7 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bot`
+Table structure for table `bot`
 --
 
 CREATE TABLE `bot` (
@@ -98,7 +98,7 @@ CREATE TABLE `bot` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `channel`
+Table structure for table `channel`
 --
 
 CREATE TABLE `channel` (
@@ -111,7 +111,7 @@ CREATE TABLE `channel` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `company`
+Table structure for table `company`
 --
 
 CREATE TABLE `company` (
@@ -126,7 +126,7 @@ CREATE TABLE `company` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+Table structure for table `contact`
 --
 
 CREATE TABLE `contact` (
@@ -142,7 +142,7 @@ CREATE TABLE `contact` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact_channel`
+Table structure for table `contact_channel`
 --
 
 CREATE TABLE `contact_channel` (
@@ -155,7 +155,7 @@ CREATE TABLE `contact_channel` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cstm_template`
+Table structure for table `cstm_template`
 --
 
 CREATE TABLE `cstm_template` (
@@ -169,7 +169,7 @@ CREATE TABLE `cstm_template` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `email`
+Table structure for table `email`
 --
 
 CREATE TABLE `email` (
@@ -187,7 +187,7 @@ CREATE TABLE `email` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `instance`
+Table structure for table `instance`
 --
 
 CREATE TABLE `instance` (
@@ -203,7 +203,7 @@ CREATE TABLE `instance` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `log`
+Table structure for table `log`
 --
 
 CREATE TABLE `log` (
@@ -219,7 +219,7 @@ CREATE TABLE `log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `message`
+Table structure for table `message`
 --
 
 CREATE TABLE `message` (
@@ -236,7 +236,7 @@ CREATE TABLE `message` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `plans`
+Table structure for table `plans`
 --
 
 CREATE TABLE `plans` (
@@ -253,7 +253,7 @@ CREATE TABLE `plans` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `schedule`
+Table structure for table `schedule`
 --
 
 CREATE TABLE `schedule` (
@@ -268,7 +268,7 @@ CREATE TABLE `schedule` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `subscription`
+Table structure for table `subscription`
 --
 
 CREATE TABLE `subscription` (
@@ -284,7 +284,7 @@ CREATE TABLE `subscription` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `support_agents`
+Table structure for table `support_agents`
 --
 
 CREATE TABLE `support_agents` (
@@ -298,7 +298,7 @@ CREATE TABLE `support_agents` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `support_ticket`
+Table structure for table `support_ticket`
 --
 
 CREATE TABLE `support_ticket` (
@@ -318,7 +318,7 @@ CREATE TABLE `support_ticket` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `template`
+Table structure for table `template`
 --
 
 CREATE TABLE `template` (
@@ -331,7 +331,7 @@ CREATE TABLE `template` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ticket_reply`
+Table structure for table `ticket_reply`
 --
 
 CREATE TABLE `ticket_reply` (
@@ -346,7 +346,7 @@ CREATE TABLE `ticket_reply` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -367,19 +367,19 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for table `admin`
+Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`apikey`);
 
 --
--- Indexes for table `bot`
+Indexes for table `bot`
 --
 ALTER TABLE `bot`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `channel`
+Indexes for table `channel`
 --
 ALTER TABLE `channel`
   ADD PRIMARY KEY (`channel_id`),
@@ -387,13 +387,13 @@ ALTER TABLE `channel`
   ADD KEY `fk_iid_channel` (`instance_id`);
 
 --
--- Indexes for table `company`
+Indexes for table `company`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`company_id`);
 
 --
--- Indexes for table `contact`
+Indexes for table `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`contact_id`),
@@ -401,7 +401,7 @@ ALTER TABLE `contact`
   ADD KEY `fk_iid_contact` (`instance_id`);
 
 --
--- Indexes for table `contact_channel`
+Indexes for table `contact_channel`
 --
 ALTER TABLE `contact_channel`
   ADD PRIMARY KEY (`contact_id`,`channel_id`),
@@ -409,14 +409,14 @@ ALTER TABLE `contact_channel`
   ADD KEY `fk_iid_contact_channel` (`instance_id`);
 
 --
--- Indexes for table `cstm_template`
+Indexes for table `cstm_template`
 --
 ALTER TABLE `cstm_template`
   ADD PRIMARY KEY (`cstm_id`),
   ADD KEY `fk_apikey_cstm_templet` (`apikey`);
 
 --
--- Indexes for table `email`
+Indexes for table `email`
 --
 ALTER TABLE `email`
   ADD PRIMARY KEY (`email_id`),
@@ -424,14 +424,14 @@ ALTER TABLE `email`
   ADD KEY `fk_apikey_email` (`apikey`);
 
 --
--- Indexes for table `instance`
+Indexes for table `instance`
 --
 ALTER TABLE `instance`
   ADD PRIMARY KEY (`instance_id`),
   ADD KEY `fk_apikey_instance` (`apikey`);
 
 --
--- Indexes for table `log`
+Indexes for table `log`
 --
 ALTER TABLE `log`
   ADD PRIMARY KEY (`logid`),
@@ -439,7 +439,7 @@ ALTER TABLE `log`
   ADD KEY `fk_instance_id_log` (`instance_id`);
 
 --
--- Indexes for table `message`
+Indexes for table `message`
 --
 ALTER TABLE `message`
   ADD PRIMARY KEY (`msgid`),
@@ -447,13 +447,13 @@ ALTER TABLE `message`
   ADD KEY `fk_iid_message` (`instance_id`);
 
 --
--- Indexes for table `plans`
+Indexes for table `plans`
 --
 ALTER TABLE `plans`
   ADD PRIMARY KEY (`planid`);
 
 --
--- Indexes for table `schedule`
+Indexes for table `schedule`
 --
 ALTER TABLE `schedule`
   ADD PRIMARY KEY (`schedule_id`),
@@ -461,7 +461,7 @@ ALTER TABLE `schedule`
   ADD KEY `fk_apikey_schedule` (`apikey`);
 
 --
--- Indexes for table `subscription`
+Indexes for table `subscription`
 --
 ALTER TABLE `subscription`
   ADD PRIMARY KEY (`subID`),
@@ -469,52 +469,52 @@ ALTER TABLE `subscription`
   ADD KEY `fk_apikey_subscription` (`apikey`);
 
 --
--- Indexes for table `support_agents`
+Indexes for table `support_agents`
 --
 ALTER TABLE `support_agents`
   ADD PRIMARY KEY (`apikey`);
 
 --
--- Indexes for table `support_ticket`
+Indexes for table `support_ticket`
 --
 ALTER TABLE `support_ticket`
   ADD PRIMARY KEY (`ticket_id`),
   ADD KEY `fk_apikey_support_ticket` (`apikey`);
 
 --
--- Indexes for table `template`
+Indexes for table `template`
 --
 ALTER TABLE `template`
   ADD PRIMARY KEY (`temp_id`);
 
 --
--- Indexes for table `ticket_reply`
+Indexes for table `ticket_reply`
 --
 ALTER TABLE `ticket_reply`
   ADD PRIMARY KEY (`index_no`,`identity`,`ticket_id`);
 
 --
--- Indexes for table `users`
+Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`apikey`);
 
 --
--- Constraints for table `channel`
+Constraints for table `channel`
 --
 ALTER TABLE `channel`
   ADD CONSTRAINT `fk_apikey_channel` FOREIGN KEY (`apikey`) REFERENCES `users` (`apikey`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_iid_channel` FOREIGN KEY (`instance_id`) REFERENCES `instance` (`instance_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `contact`
+Constraints for table `contact`
 --
 ALTER TABLE `contact`
   ADD CONSTRAINT `fk_apikey_contact` FOREIGN KEY (`apikey`) REFERENCES `users` (`apikey`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_iid_contact` FOREIGN KEY (`instance_id`) REFERENCES `instance` (`instance_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `contact_channel`
+Constraints for table `contact_channel`
 --
 ALTER TABLE `contact_channel`
   ADD CONSTRAINT `fk_apikey_contact_channel` FOREIGN KEY (`apikey`) REFERENCES `users` (`apikey`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -522,34 +522,34 @@ ALTER TABLE `contact_channel`
   ADD CONSTRAINT `fk_iid_contact_channel` FOREIGN KEY (`instance_id`) REFERENCES `instance` (`instance_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `email`
+Constraints for table `email`
 --
 ALTER TABLE `email`
   ADD CONSTRAINT `fk_apikey_email` FOREIGN KEY (`apikey`) REFERENCES `users` (`apikey`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_iid_email` FOREIGN KEY (`instance_id`) REFERENCES `instance` (`instance_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `instance`
+Constraints for table `instance`
 --
 ALTER TABLE `instance`
   ADD CONSTRAINT `fk_apikey_instance` FOREIGN KEY (`apikey`) REFERENCES `users` (`apikey`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `message`
+Constraints for table `message`
 --
 ALTER TABLE `message`
   ADD CONSTRAINT `fk_apikey_message` FOREIGN KEY (`apikey`) REFERENCES `users` (`apikey`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_iid_message` FOREIGN KEY (`instance_id`) REFERENCES `instance` (`instance_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `subscription`
+Constraints for table `subscription`
 --
 ALTER TABLE `subscription`
   ADD CONSTRAINT `fk_apikey_subscription` FOREIGN KEY (`apikey`) REFERENCES `users` (`apikey`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_planid` FOREIGN KEY (`planID`) REFERENCES `plans` (`planid`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `support_ticket`
+Constraints for table `support_ticket`
 --
 ALTER TABLE `support_ticket`
   ADD CONSTRAINT `fk_apikey_support_ticket` FOREIGN KEY (`apikey`) REFERENCES `users` (`apikey`) ON DELETE CASCADE ON UPDATE CASCADE;
