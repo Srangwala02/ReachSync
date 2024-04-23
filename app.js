@@ -65,11 +65,6 @@ conn.connect((err) => {
 })
 
 cloudinary.config({
-    // <--------------Old Config-------------->
-    // cloud_name: "do6cd8c3p",
-    // api_key: "589267637882559",
-    // api_secret: "3HypXjPtwO8Jg9Bv23hTR83kY-M"
-    // <--------------New Config-------------->
     cloud_name: "dx1ghhk7f",
     api_key: "653234377299131",
     api_secret: "z37qJcan_y9hvTHmdM2ffHrHHIo"
