@@ -564,10 +564,10 @@ COMMIT;
 After installing Node.js, follow these steps to set up the project:
 
 - **Clone the repository:**
-  - git clone https://github.com/your-username/your-project.git
+  - git clone [https://github.com/Srangwala02/ReachSync.git](https://github.com/Srangwala02/ReachSync.git)
 
 - **Navigate to the project directory:**
-  - cd your-project
+  - cd ReachSync
      
 - **Install dependencies:**
   - npm install
@@ -575,4 +575,4 @@ After installing Node.js, follow these steps to set up the project:
 - **Start the Node.js application:**
   - npm run dev
     
-Now, you're all set to run the project. Open your web browser and navigate to `http://localhost/mycode/template/star1` to view your project.
+Now, you're all set to run the project. Open your web browser and navigate to `http://localhost:8081` to view your project.
