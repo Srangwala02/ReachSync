@@ -44,7 +44,7 @@ Follow these steps to start XAMPP:
 After starting XAMPP, navigate to http://localhost/phpmyadmin/ in your web browser.
 
 1. Create a new database named `reachsync`.
-2. In the SQL tab of the newly created `test` database, execute the following MySQL commands:
+2. In the SQL tab of the newly created `reachsync` database, execute the following MySQL commands:
 
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
